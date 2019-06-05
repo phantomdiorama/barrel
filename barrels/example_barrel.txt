@@ -1,0 +1,24 @@
+# Comments start with a hash symbol, blank lines are ignored
+
+# Use (show desk) to hide all visible apps.
+(show desk)
+
+# Programs to launch start at the beginning of a line, using FULL PATH. 
+[# no need to quote or escape?]
+C:\Program Files\Mozilla Firefox\firefox.exe
+
+#Programs that are in PATH can launch with title
+notepad++ 
+[
+# Programs can take commandlinf arguments
+C:\Program Files\Mozilla Firefox\firefox.exe https://en.wikipedia.org/wiki/Barrel
+]
+
+# You can open files
+C:\Users\You\Documents\something.pdf
+
+# And open folders
+C:\Windows
+
+# Or a URL (opens in default browser)
+https://en.wikipedia.org/wiki/Barrel
