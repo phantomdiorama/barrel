@@ -4,15 +4,10 @@
 (show desk)
 
 # Programs to launch start at the beginning of a line, using FULL PATH. 
-[# no need to quote or escape?]
 C:\Program Files\Mozilla Firefox\firefox.exe
 
-#Programs that are in PATH can launch with title
-notepad++ 
-[
 # Programs can take commandlinf arguments
 C:\Program Files\Mozilla Firefox\firefox.exe https://en.wikipedia.org/wiki/Barrel
-]
 
 # You can open files
 C:\Users\You\Documents\something.pdf
