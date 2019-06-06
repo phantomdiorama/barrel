@@ -13,8 +13,8 @@ Loop Files, barrels\*.barrel ; Recurse into subfolders.
 }
 Menu, Tray, Add 
 Menu, Options, Add, Barrel Folder, FolderHandler
+Menu, Options, Add, Add to start up, StartHandler
 Menu, Options, Add, Readme, WebHandler
-Menu, Options, Add, Github, WebHandler
 Menu, Tray, Add, Options, :Options
 Menu, Tray, Add
 Menu, Tray, Add, Reload, ReloadHandler
@@ -47,6 +47,11 @@ return
 WebHandler:
 Run, https://github.com/phantomdiorama/barrel
 return 
+
+StartHandler:
+FileCreateShortcut, %A_ScriptDir%\barrel.ahk, %A_StartMenu%\Programs\Startup\barrel.lnk
+msgbox, Barrel added to start up
+return
 
 ReloadHandler:
 reload 
