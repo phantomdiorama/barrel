@@ -1,3 +1,4 @@
+# Barrel launches a list of programs, one at a time
 # Barrel is configured with text files with the .barrel extension 
 # Comments start with a hash symbol, blank lines are ignored 
 
@@ -16,6 +17,5 @@ C:\Windows
 # Or a URL (opens in default browser)
 https://en.wikipedia.org/wiki/Barrel
 
-# there are also some experimental commands 
-# Use (show desk) to hide all visible applications
+# there are also some experimental commands (eg (show desk) hides all applications)
 (show desk)
