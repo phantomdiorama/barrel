@@ -1,5 +1,5 @@
-# ignore 'new' script
-New AutoHotkey Script.ahk
+# ignore 'barrels'
+*.barrel
 
 # ignore 'test' folder
 test/
