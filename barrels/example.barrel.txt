@@ -5,7 +5,7 @@
 # Programs to launch start at the beginning of a line, using FULL PATH. 
 C:\Program Files\Mozilla Firefox\firefox.exe
 
-# Programs can take commandline arguments
+# Programs can take command line arguments
 C:\Program Files\Mozilla Firefox\firefox.exe https://en.wikipedia.org/wiki/Barrel
 
 # You can open files
@@ -17,5 +17,9 @@ C:\Windows
 # Or a URL (opens in default browser)
 https://en.wikipedia.org/wiki/Barrel
 
+# Lines starting with $ run as command line scripts (NEW - There could be bugs)
+$ echo hello world
+
 # there are also some experimental commands (eg (show desk) hides all applications)
+# suggestions welcome
 (show desk)

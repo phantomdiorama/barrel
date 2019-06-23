@@ -32,6 +32,11 @@ Loop, read, %A_ScriptDir%\barrels\%A_ThisMenuItem%.barrel
         {
             SendInput, #d
         }
+    if A_LoopReadLine contains $
+        {
+            cmd := SubStr(A_LoopReadLine, 3)
+            Run, cmd /k %cmd%
+        }
     else
     {
         

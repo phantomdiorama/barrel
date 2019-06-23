@@ -6,7 +6,7 @@ Like Brett Terpstra's [Bunch](https://brettterpstra.com/projects/bunch/), but fo
 ![](https://raw.githubusercontent.com/phantomdiorama/barrel/master/screenshot.png)
 
 ## Overview
-Barrel is a simple system tray tool that allows you launch groups of applications, configured with text files.
+Barrel is a simple system tray tool that allows you launch groups of applications, configured with simple text files.
 
 [Example](https://github.com/phantomdiorama/barrel/blob/master/barrels/example_barrel.txt)
 
