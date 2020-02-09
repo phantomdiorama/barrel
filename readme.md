@@ -8,7 +8,7 @@ Like Brett Terpstra's [Bunch](https://brettterpstra.com/projects/bunch/), but fo
 ## Overview
 Barrel is a simple system tray tool that allows you launch groups of applications, configured with simple text files.
 
-[Example](https://github.com/phantomdiorama/barrel/blob/master/barrels/example_barrel.txt)
+[Example](https://github.com/phantomdiorama/barrel/blob/master/barrels/example.barrel.txt)
 
 ## Requirements
 * [AutoHotkey](https://www.autohotkey.com/)
@@ -16,8 +16,8 @@ Barrel is a simple system tray tool that allows you launch groups of application
 
 
 ### TODO
-* add ability to run console commands
-* feature parity with Bunch (maybe?)
+?
+
 
 ### Thanks
 [Brett Terpstra](https://brettterpstra.com/) for the idea
