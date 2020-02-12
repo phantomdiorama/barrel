@@ -6,10 +6,12 @@ SetWorkingDir %A_ScriptDir%
 
 Menu, Tray, Icon, barrel.ico
 Menu, Tray, NoStandard
-Loop Files, barrels\*.barrel ; Recurse into subfolders.
+Loop Files, barrels\*.barrel
 {
-    StringTrimRight, Var, A_LoopFileName, 7
-    Menu, Tray, Add, %Var%, MenuHandler
+	MenuString := A_LoopFileName
+	word_array := StrSplit(MenuString, ".")
+	var:= word_array[1]
+	Menu, Tray, Add, %Var%, MenuHandler
 }
 Menu, Tray, Add 
 Menu, Options, Add, Barrel Folder, FolderHandler
@@ -24,24 +26,38 @@ return
 MenuHandler:
 Loop, read, %A_ScriptDir%\barrels\%A_ThisMenuItem%.barrel
 {
-    if A_LoopReadLine contains `#
-    {
-        continue
-    }
-    if A_LoopReadLine = (show desk)
-        {
-            SendInput, #d
-        }
-    if A_LoopReadLine contains $
-        {
-            cmd := SubStr(A_LoopReadLine, 3)
-            Run, cmd /k %cmd%
-        }
-    else
-    {
-        
-        Run, %A_LoopReadLine%
-    }
+	if (InStr(A_LoopReadLine, "#") = 1)
+	{
+		continue
+	}
+	if (InStr(A_LoopReadLine, "(s") = 1) ;"(show desk)"
+		{
+			SendInput, #d
+			continue
+		}
+	if (InStr(A_LoopReadLine,"$") = 1)
+		{
+			cmd := SubStr(A_LoopReadLine, 3)
+			Run, cmd /k %cmd%
+			continue
+		}
+	if (InStr(A_LoopReadLine,"_") = 1)
+		{
+			cmd := SubStr(A_LoopReadLine, 3)
+			Run, %cmd%,, Min
+			continue
+		}
+	if (InStr(A_LoopReadLine,"+") = 1)
+		{
+			cmd := SubStr(A_LoopReadLine, 3)
+			Run, %cmd%,, Max
+			continue
+		}
+	else
+	{
+		
+		Run, %A_LoopReadLine%
+	}
 }
 return 
 
@@ -64,4 +80,4 @@ return
 
 ExitHandler:
 Exitapp
-return  
+return	

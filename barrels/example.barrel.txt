@@ -17,9 +17,13 @@ C:\Windows
 # Or a URL (opens in default browser)
 https://en.wikipedia.org/wiki/Barrel
 
-# Lines starting with $ run as command line scripts (NEW - There could be bugs)
+# Lines starting with $ run as command line scripts (There could be bugs)
 $ echo hello world
 
 # there are also some experimental commands (eg (show desk) hides all applications)
 # suggestions welcome
 (show desk)
+
+# NEW Lines startng with _ or + start minimized or maximized
+_ notepad
++ calc
