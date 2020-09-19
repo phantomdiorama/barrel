@@ -26,28 +26,28 @@ return
 MenuHandler:
 Loop, read, %A_ScriptDir%\barrels\%A_ThisMenuItem%.barrel
 {
-	if (InStr(A_LoopReadLine, "#") = 1)
+	if (RegExMatch(A_LoopReadLine, "^#") = 1)
 	{
 		continue
 	}
-	if (InStr(A_LoopReadLine, "(s") = 1) ;"(show desk)"
+	if (RegExMatch(A_LoopReadLine, "^\(s") = 1) ;"(show desk)"
 		{
 			SendInput, #d
 			continue
 		}
-	if (InStr(A_LoopReadLine,"$") = 1)
+	if (RegExMatch(A_LoopReadLine,"^\$") = 1)
 		{
 			cmd := SubStr(A_LoopReadLine, 3)
 			Run, cmd /k %cmd%
 			continue
 		}
-	if (InStr(A_LoopReadLine,"_") = 1)
+	if (RegExMatch(A_LoopReadLine,"^_") = 1)
 		{
 			cmd := SubStr(A_LoopReadLine, 3)
 			Run, %cmd%,, Min
 			continue
 		}
-	if (InStr(A_LoopReadLine,"+") = 1)
+	if (RegExMatch(A_LoopReadLine,"^\+") = 1)
 		{
 			cmd := SubStr(A_LoopReadLine, 3)
 			Run, %cmd%,, Max
